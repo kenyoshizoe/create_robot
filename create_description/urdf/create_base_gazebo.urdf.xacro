@@ -16,18 +16,6 @@
         <odometry_frame>odom</odometry_frame>
         <robot_base_frame>base_footprint</robot_base_frame>
       </plugin>
-
-      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
-        <alwaysOn>true</alwaysOn>
-        <update_rate>100.0</update_rate>
-        <body_name>base_link</body_name>
-        <topic_name>simple_controller/absolute_position</topic_name>
-        <gaussian_noise>0</gaussian_noise>
-        <frame_name>map</frame_name>
-        <xyzOffsets>0 0 0</xyzOffsets>
-        <rpyOffsets>0 0 0</rpyOffsets>
-        <!--<interface:position name="p3d_base_position"/>-->
-      </plugin>
     </gazebo>
 
     <gazebo reference="left_wheel_link">
