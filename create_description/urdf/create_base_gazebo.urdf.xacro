@@ -4,17 +4,18 @@
     <gazebo>
       <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
         <alwaysOn>true</alwaysOn>
-        <update_rate>${diffdrive_update_rate}</update_rate>
         <left_joint>left_wheel_joint</left_joint>
         <right_joint>right_wheel_joint</right_joint>
         <wheel_separation>${wheel_separation}</wheel_separation>
         <wheel_diameter>${wheel_radius * 2}</wheel_diameter>
-        <wheel_torque>${wheel_torque}</wheel_torque>
-        <!--wheelAcceleration>${wheel_accel}</wheelAcceleration-->
-        <command_topic>cmd_vel</command_topic>
-        <odometry_topic>odom</odometry_topic>
+        <update_rate>${diffdrive_update_rate}</update_rate>
         <odometry_frame>odom</odometry_frame>
         <robot_base_frame>base_footprint</robot_base_frame>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <publish_wheel_tf>true</publish_wheel_tf>
+        <max_wheel_torque>${wheel_torque}</max_wheel_torque>
+        <!--max_wheel_acceleration>${wheel_accel}</max_wheel_acceleration-->
       </plugin>
     </gazebo>
 
